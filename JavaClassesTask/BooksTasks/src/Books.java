@@ -1,4 +1,6 @@
-public class Books {
+import java.util.*;
+
+public class Books implements Comparator<Books> {
     private int id;
     private String name;
     private String author;
@@ -7,6 +9,16 @@ public class Books {
     private int countOfPage;
     private double price;
     private String bindingType;
+
+    public int compare (Books one, Books two){
+        return one.getAuthor().compareTo(two.getAuthor());
+    }
+
+    public Collection<Books> bookSortAuthor (ArrayList<Books> listBooks){
+        Books bookCompare = new Books();
+        Collections.sort(listBooks,bookCompare);
+        return listBooks;
+    }
 
     public Books(){
 
@@ -126,6 +138,11 @@ public class Books {
     }
 }
 
+//class BooksCompare implements Comparator<Books> {
+//    public int compare (Books one, Books two){
+//        return one.getPublishingHouse().compareTo(two.getPublishingHouse());
+//    }
+//}
 abstract class RandomFields{
 
     public static String getBindingTypeRandom (){

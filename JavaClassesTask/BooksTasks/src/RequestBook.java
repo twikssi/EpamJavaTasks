@@ -1,6 +1,5 @@
 import javax.xml.bind.SchemaOutputResolver;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class RequestBook {
     public static void main (String [] args){
@@ -109,6 +108,17 @@ public class RequestBook {
                 "\na)список книг, заданного автора " +
                 "\nб)список книг, выпущенных заданным издательством" +
                 "\nс)список книг, выпущенных после заданного года ");
+
+
+
+
+
+        Books bookCompareAuthor = new Books();
+        bookCompareAuthor.bookSortAuthor(bookList);
+
+        for (int i = 0; i < bookList.size(); i++){
+            bookList.get(i).getLine();
+        }
 
 
         Scanner in = new Scanner(System.in);
