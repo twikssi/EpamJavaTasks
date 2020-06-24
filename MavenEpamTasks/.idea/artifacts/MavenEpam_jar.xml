@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MavenEpam:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MavenEpam_jar</output-path>
+    <root id="archive" name="MavenEpam.jar">
+      <element id="module-output" name="MavenEpam" />
+    </root>
+  </artifact>
+</component>
